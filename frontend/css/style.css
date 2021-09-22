@@ -48,8 +48,8 @@ body {
 
 .message {
     color: white;
-    margin-bottom: 10px;
-    width: 32%;
+    margin-bottom: 20px;
+    width: 38%;
     padding: 3px 7px 6px 7px;
     background-image: linear-gradient(#ffa500, #ff8800);
     border-radius: 6px;
@@ -69,7 +69,7 @@ body {
     width: 50%;
     border-radius: 12px;
     color: #ffffffda;
-    margin: 10px auto;
+    margin: 20px auto;
     text-align: center;
     clear: both;
 }
@@ -109,8 +109,17 @@ body {
     padding: 8px 10px;
 }
 
+@media screen and (max-width: 750px){
+    .message{
+        width: 60%;
+    }
+} 
+
 @media screen and (max-width: 390px) {
     #messageInput {
         width: 65%;
+    }
+    .message {
+        width: 75%;
     }
 }

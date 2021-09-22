@@ -64,10 +64,11 @@ socket.on('left', name => {
 });
 
 socket.on('username-exists', data => {
-    entryBox.classList.toggle('d-none');
     chatBox.classList.toggle('d-none');
-
+    entryBox.classList.toggle('d-none');
+    
     alert(data);
+
 });
 
 form.addEventListener('submit', (event) => {
