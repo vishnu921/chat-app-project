@@ -1,17 +1,17 @@
 body {
     min-height: 100vh;
-    background-image: linear-gradient(#00ffb3, #29a882);
+    background-image: linear-gradient(#ffa500, #da6404);
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* background-color: #00ffb3; */
 }
 
 .main-heading {
+    color: black;
     text-align: center;
 }
 
 .entry-box {
-    background-color: #51bdfc;
-    width: 50%;
+    background-color: rgb(204, 116, 0);
+    width:70%;
     margin: auto;
     text-align: center;
     border-radius: 5px;
@@ -35,9 +35,10 @@ body {
 }
 
 .container {
+    position: relative;
     padding: 15px;
     margin: auto;
-    background-color: #a24be9;
+    background-color: #000000;
     border: solid 1px black;
     border-radius: 10px;
     width: 90vw;
@@ -46,11 +47,11 @@ body {
 }
 
 .message {
-    color: #ffffffd2;
+    color: white;
     margin-bottom: 10px;
-    width: 25%;
-    padding: 5px;
-    background-color: #26755e;
+    width: 32%;
+    padding: 3px 7px 6px 7px;
+    background-color: orange;
     border-radius: 6px;
 }
 
@@ -67,16 +68,22 @@ body {
 .center {
     width: 50%;
     border-radius: 12px;
-    color: #ffffffa1;
-    margin: auto;
+    color: #ffffffda;
+    margin: 10px auto;
     text-align: center;
     clear: both;
 }
 
 .author {
     margin: 3px;
-    color: #ffffffb0;
+    color: #ffffffd5;
     font-size: 80%;
+    font-style: italic;
+}
+
+.send{
+    position: sticky;
+    bottom: 5px;
 }
 
 #sendForm {
@@ -86,7 +93,7 @@ body {
 
 #messageInput {
     padding: 3px 10px;
-    width: 90%;
+    width: 80%;
     border-radius: 8px;
     border: none;
     height: 30px;

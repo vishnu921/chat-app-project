@@ -18,15 +18,24 @@ const io = socketio(server, {
 let users = {};
 
 io.on('connection', (socket) => {
-    console.log('connected with socket id =', socket.id);
-    // socket.on('new-user-joined', name => {
-    //     users[socket.id] = name;
-    //     socket.broadcast.emit('user-joined', name);
-    // });
+    socket.on('new-user-joined', name => {
+        console.log("new user: ", name);
+        users[socket.id] = name;
+        socket.broadcast.emit('user-joined', name);
+    });
 
-    // socket.on('send', message => {
-    //     socket.broadcast.emit('recieve', { message: message, name: user[socket.id]});
-    // });
+    socket.on('send', message => {
+        socket.broadcast.emit('recieve', { message: message, name: users[socket.id]});
+    });
+
+    socket.on('disconnect', message => {
+        if(users[socket.id] === undefined){
+            return;
+        }
+        console.log(`${users[socket.id]} left`);
+        socket.broadcast.emit('left', users[socket.id]);
+        users[socket.id];
+    })
 });
 
 server.listen(port, () => {
