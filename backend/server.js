@@ -19,6 +19,12 @@ let users = {};
 
 io.on('connection', (socket) => {
     socket.on('new-user-joined', name => {
+        for(let sid in users){
+            if(users[sid] === name){
+                socket.emit('username-exists', 'this username already exists');
+                return;
+            }
+        }
         console.log("new user: ", name);
         users[socket.id] = name;
         socket.broadcast.emit('user-joined', name);
@@ -34,7 +40,7 @@ io.on('connection', (socket) => {
         }
         console.log(`${users[socket.id]} left`);
         socket.broadcast.emit('left', users[socket.id]);
-        users[socket.id];
+        delete users[socket.id];
     })
 });
 

@@ -46,7 +46,7 @@ const newUserJoined = () => {
         return;
     }
     entryBox.classList.toggle('d-none');
-    chatBox.classList.remove('d-none');
+    chatBox.classList.toggle('d-none');
 
     socket.emit('new-user-joined', name);
 };
@@ -61,6 +61,13 @@ socket.on('recieve', data => {
 
 socket.on('left', name => {
     addMessage('', `${name} left the chat`, 'center');
+});
+
+socket.on('username-exists', data => {
+    entryBox.classList.toggle('d-none');
+    chatBox.classList.toggle('d-none');
+
+    alert(data);
 });
 
 form.addEventListener('submit', (event) => {

@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     background-image: linear-gradient(#ffa500, #da6404);
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .main-heading {
@@ -41,7 +41,7 @@ body {
     background-color: #000000;
     border: solid 1px black;
     border-radius: 10px;
-    width: 90vw;
+    width: 90%;
     height: 70vh;
     overflow-y: scroll;
 }
@@ -51,7 +51,7 @@ body {
     margin-bottom: 10px;
     width: 32%;
     padding: 3px 7px 6px 7px;
-    background-color: orange;
+    background-image: linear-gradient(#ffa500, #ff8800);
     border-radius: 6px;
 }
 
@@ -100,9 +100,17 @@ body {
 }
 
 .btn {
-    background-color: #00f7ff;
+    background-image: linear-gradient(#a5a5a5, #686868);
+    font-weight: bold;
+    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     padding: 8px 10px;
+}
+
+@media screen and (max-width: 390px) {
+    #messageInput {
+        width: 65%;
+    }
 }
