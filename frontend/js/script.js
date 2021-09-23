@@ -9,7 +9,6 @@ const chatBox = document.getElementById('chatBox');
 const enterBtn = document.getElementById('enterBtn');
 const username = document.getElementById('username');
 const messAudio = new Audio('media/aud.mp3');
-// messAudio.play();
 
 async function playAudio() {
     try {
@@ -19,6 +18,7 @@ async function playAudio() {
     }
 }
 
+// function to add the message element to the chat window
 const addMessage = (author, message, type) => {
     const messageEle = document.createElement('div');
     messageEle.classList.add('message', type);
@@ -39,6 +39,7 @@ const addMessage = (author, message, type) => {
     }
 }
 
+// function for new user joined
 const newUserJoined = () => {
     const name = username.value;
     if(name === ""){
@@ -68,12 +69,12 @@ socket.on('username-exists', data => {
     entryBox.classList.toggle('d-none');
     
     alert(data);
-
 });
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const mess = messageInput.value;
+    
     if(mess === ""){
         alert("Enter a message");
         return;
