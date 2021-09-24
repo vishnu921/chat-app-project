@@ -2,13 +2,13 @@
 
 This simple realtime chat application lets users enter the chat room and chat with their friends.
 
-![Screenshot of demo](./screenshots/enter.png)
+![Screenshot of demo](./screenshots/enter.PNG)
 
-![Screenshot of demo](./screenshots/user1.png)
+![Screenshot of demo](./screenshots/user1.PNG)
 
-![Screenshot of demo](./screenshots/user2.png)
+![Screenshot of demo](./screenshots/user2.PNG)
 
-![Screenshot of demo](./screenshots/user3.png)
+![Screenshot of demo](./screenshots/user3.PNG)
 
 ## Requirements
 
